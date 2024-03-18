@@ -1,5 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Header from "./assets/components/Header"
+import Header from "./components/Header"
+import Home from "./pages/Home"
+import SignUp from "./pages/SignUp"
 
 
 
@@ -11,7 +13,8 @@ function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route />
+        <Route path={'/'} element={<Home />}/>
+        <Route path={'/sign-up'} element={<SignUp />}/>
       </Routes>
     </BrowserRouter>
     </>
