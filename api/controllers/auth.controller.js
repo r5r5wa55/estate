@@ -23,10 +23,10 @@ export const signin=async(req,res,next)=>{
     const vaildPassword=await bcryptjs.compareSync(password,vaildUser.password)
     if(!vaildPassword) return next(errorHandler(401,'ตรวจสอบรหัสผ่าน'))
     const token = jwt.sign({id:vaildUser._id},process.env.JWT_SECRET)
-    const {password:pass,...we} = vaildUser;
+    const {password:pass,...rest} = vaildUser;
     res.cookie('access_token',token,{httpOnly:true})
     .status(200)
-    .json(we)
+    .json(rest._doc)
   } catch (error) {
     next(error);
   }
