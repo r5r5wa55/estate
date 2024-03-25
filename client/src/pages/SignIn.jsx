@@ -54,6 +54,8 @@ export default function SignIn() {
         />
         <input
           type='password'
+          name='password'
+          autoComplete="password"
           placeholder='password'
           className='border p-3 rounded-lg'
           id='password'
