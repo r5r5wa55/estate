@@ -6,9 +6,7 @@ import { useNavigate } from "react-router-dom";
 export default function Oauth() {
   const dispath = useDispatch();
   const navigate = useNavigate();
-  const generatedPassword =
-    Math.random().toString(36).slice(-8) + Math.random().toString(36).slice(-8);
-  console.log(generatedPassword);
+
   const handleSubmit = async () => {
     try {
       const provider = new GoogleAuthProvider();
