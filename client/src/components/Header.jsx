@@ -62,7 +62,7 @@ export default function Header() {
               />
             ) : (
               <Link to="/sign-in">
-              <li className=" text-slate-700 hover:underline">SignIn</li>
+                <li className=" text-slate-700 hover:underline">SignIn</li>
               </Link>
             )}
           </Link>
